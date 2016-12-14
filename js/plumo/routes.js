@@ -18,7 +18,7 @@
         });
 
         $stateProvider.state('app.login', {
-            url:"/",
+            url:"/login",
             templateUrl:"views/plumo/login.html"
         });
     }

@@ -2,7 +2,8 @@
     
     angular.module('plumo', [
         'ui.router',
-        'ngResource'
+        'ngResource',
+        'plumo-houses'
     ]);
     
 })(angular);

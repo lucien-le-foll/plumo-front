@@ -1,7 +1,8 @@
 (function(angular){
     
     angular.module('plumo', [
-        'ui.router'
+        'ui.router',
+        'ngResource'
     ]);
     
 })(angular);

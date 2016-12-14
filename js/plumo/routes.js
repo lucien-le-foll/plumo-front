@@ -1,5 +1,5 @@
 (function(angular){
-    
+
     angular.module('plumo').config(Config);
 
     Config.$inject=["$stateProvider","$urlRouterProvider"]
@@ -18,8 +18,13 @@
         });
 
         $stateProvider.state('app.login', {
-            url:"/",
+            url:"/login",
             templateUrl:"views/plumo/login.html"
+        });
+
+        $stateProvider.state('app.register', {
+            url:"/register",
+            templateUrl:"views/plumo/register.html"
         });
     }
     

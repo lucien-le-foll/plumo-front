@@ -26,6 +26,10 @@
             url:"/register",
             templateUrl:"views/plumo/register.html"
         });
+        $stateProvider.state('app.dashboard', {
+            url:"/dashboard",
+            templateUrl:"views/plumo/dashboard.html"
+        });
     }
     
 })(angular);

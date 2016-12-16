@@ -1,0 +1,29 @@
+{
+  "name": "plumo-front",
+  "version": "1.0.0",
+  "description": "plumo-front",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.18.5",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucien-le-foll/plumo-front.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucien-le-foll/plumo-front/issues"
+  },
+  "homepage": "https://github.com/lucien-le-foll/plumo-front#readme"
+}

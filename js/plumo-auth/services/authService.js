@@ -15,8 +15,9 @@
                         email: email,
                         password: password
                     })
-                    .then(function (data) {
-                        AuthToken.setToken(data.token);
+                    .then(function (response) {
+                        console.log(response);
+                        AuthToken.setToken(response.data.token);
                         return data;
                     });
             };
@@ -95,7 +96,7 @@
 
                 // if the token exists, add it to the header as x-access-token
                 if (token)
-                    config.headers['x-access-token'] = token;
+                    config.headers['Authorization'] = 'Bearer '+token;
 
                 return config;
             };

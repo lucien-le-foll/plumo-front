@@ -10,8 +10,8 @@
             controller:"HousesController",
             controllerAs:"$ctrl",
             resolve: {
-                houses:['HousesService',function(HousesService){
-                    return HousesService.query();
+                houses : ['HousesService',function(HousesService){
+                    return HousesService.getHouses();
                 }]
             }
         });

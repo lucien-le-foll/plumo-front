@@ -6,8 +6,6 @@
     function Controller(Auth) {
         var $ctrl = this;
 
-        console.log('coucou');
-
         $ctrl.attemptLogin = function (email, password) {
             console.log(Auth.login(email, password));
         }

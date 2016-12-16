@@ -16,16 +16,7 @@
             url:"/",
             templateUrl:"views/plumo/landing.html"
         });
-
-        $stateProvider.state('app.login', {
-            url:"/login",
-            templateUrl:"views/plumo/login.html"
-        });
-
-        $stateProvider.state('app.register', {
-            url:"/register",
-            templateUrl:"views/plumo/register.html"
-        });
+        
         $stateProvider.state('app.dashboard', {
             url:"/dashboard",
             templateUrl:"views/plumo/dashboard.html"

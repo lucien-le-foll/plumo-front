@@ -16,7 +16,6 @@
                         password: password
                     })
                     .then(function (response) {
-                        console.log(response);
                         AuthToken.setToken(response.data.token);
                         return data;
                     });

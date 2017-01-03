@@ -4,14 +4,18 @@
 
     Config.$inject=["$stateProvider","$urlRouterProvider"]
     function Config($stateProvider, $urlRouterProvider){
-        $stateProvider.state('app.houses', {
-            url:"/houses",
+        $stateProvider.state('app.house', {
+            url:"/house",
             templateUrl:"views/plumo-houses/index.html",
             controller:"HousesController",
             controllerAs:"$ctrl",
             resolve: {
-                houses : ['HousesService',function(HousesService){
-                    return HousesService.getHouses();
+                house : ['HousesService',function(HousesService){
+                    return HousesService.getUserHouse().then(function(data){
+                        return data;
+                    }, function(response){
+                        return null;
+                    });
                 }]
             }
         });

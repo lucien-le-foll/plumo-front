@@ -1,9 +1,9 @@
 <div class="container" id="panel-login" style="margin-top:30px">
-    <div class="col-md-offset-4 col-md-4">
+    <div class="col-md-offset-1 col-md-10">
         <div class="panel panel-default">
             <div class="panel-heading"><h3 class="panel-title"><strong>Connexion</strong></h3></div>
             <div class="panel-body">
-                <form role="form" ng-submit="$ctrl.attemptLogin(email, password)">
+                <form role="form" ng-submit="$ctrl.attemptLogin(email, password)" class="col-sm-6">
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" class="form-control" id="email" placeholder="Saisissez votre mail" ng-model="email">
@@ -15,6 +15,9 @@
                     <button type="submit" class="btn btn-sm btn-default">Connexion</button>
                     <a ui-sref="app.register" class="btn btn-sm btn-default">Vous n'avez pas de compte ?</a>
                 </form>
+                <div class="col-sm-6 panel-login-img">
+
+                </div>
             </div>
         </div>
     </div>

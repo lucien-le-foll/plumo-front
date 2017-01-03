@@ -1,9 +1,9 @@
-<div class="container" id="panel-login" style="margin-top: 70px;">
+<div class="container" id="panel-auth" style="margin-top: 70px;">
     <div class="col-md-12">
         <div class="panel panel-default">
             <div class="panel-body">
                 <form role="form" ng-submit="$ctrl.attemptLogin(email, password)" class="col-sm-5">
-                    <div class="content-login">
+                    <div class="content-auth">
                         <img src="../img/logo-blanc.png" alt="+MÖ" class="img-responsive text-center">
                         <h2 class=text-center>Connectez-vous</h2><br>
                         <div class="form-group">
@@ -14,12 +14,12 @@
                         </div>
                         <button type="submit" class="btn btn-lg btn-default">Connexion</button>
                         <div class="link text-center">
-                            <a ui-sref="app.register">Vous avez des problèmes pour vous connecter ?</a><br>
-                            <a ui-sref="app.register">Vous n'avez pas de compte ?</a>
+                            <a ui-sref="blank.register">Vous avez des problèmes pour vous connecter ?</a><br>
+                            <a ui-sref="blank.register">Vous n'avez pas de compte ?</a>
                         </div>
                     </div>
                 </form>
-                <div class="col-sm-7 panel-login-img">
+                <div class="col-sm-7 panel-auth-img">
                     <div class="css-device css-device--mobile">
                         <img class="css-device__image" src="img/plumo-test.svg">
                     </div>

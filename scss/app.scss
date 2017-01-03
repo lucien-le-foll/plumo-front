@@ -1,19 +1,15 @@
-@import "device-mockup/common";
 @import "device-mockup/component";
 
 #panel-login {
 	margin: auto;
 }
 
+@import '_variables';
+@import 'form';
+@import url(http://fonts.googleapis.com/css?family=Lato); //A integrer plus tard
 
-$bg-logo:#15f4be;
-$house:#25c7d4;
-$task:#3896ee;
-$profile:#e74738;
-$grey-darker:#2b2e37;
-$grey-lighter:#d8d4d5;
 body{
-	font-family: arial;
+	font-family: 'Lato';
 }
 
 
@@ -90,24 +86,6 @@ body{
     margin: auto;
 }
 
-// Color variables (appears count calculates by raw css)
-$color0: #2b2e37; // Appears 4 times
-$color1: #ffffff; // Appears 3 times
-$color2: #373737; // Appears 2 times
-$color3: #1a1a1a; // Appears 2 times
-$color4: #252525; // Appears 2 times
-
-$turquoise-primary:#25c7d4;
-$bleu-primary:#3896ee;
-$rouge-primary:#e74738;
-
-// Width variables (appears count calculates by raw css)
-$width0: 250px; // Appears 5 times
-$width1: 100%; // Appears 2 times
-
-// Height variables (appears count calculates by raw css)
-$height0: 65px; // Appears 2 times
-$height1: 100%; // Appears 2 times
 
 #panel-login {
     margin: auto;

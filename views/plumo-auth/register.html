@@ -1,23 +1,28 @@
-<div class="container" id="panel-register" style="margin-top:30px">
-    <div class="col-md-offset-4 col-md-4">
+<div class="container" id="panel-auth" style="margin-top: 70px;">
+    <div class="col-md-12">
         <div class="panel panel-default">
-            <div class="panel-heading"><h3 class="panel-title"><strong>Inscription</strong></h3></div>
             <div class="panel-body">
-                <form role="form">
-                    <div class="form-group">
-                        <label for="nom">Nom</label>
-                        <input type="nom" class="form-control" id="nom" placeholder="Saisissez votre nom">
+                <form role="form" ng-submit="$ctrl.attemptLogin(email, password)" class="col-sm-5">
+                    <div class="content-auth">
+                        <img src="../img/logo-blanc.png" alt="+MÖ" class="img-responsive text-center">
+                        <h2 class=text-center>Inscrivez-vous</h2><br>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="nom" placeholder="Saisissez votre nom" ng-model="nom">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" placeholder="Saisissez votre mail" ng-model="email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="motdepasse" placeholder="Mot de passe" ng-model="password">
+                        </div>
+                        <button type="submit" class="btn btn-lg btn-default">Créer mon compte</button>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Saisissez votre mail">
-                    </div>
-                    <div class="form-group">
-                        <label for="motdepasse">MÖ de passe</label>
-                        <input type="password" class="form-control" id="motdepasse" placeholder="Mot de passe">
-                    </div>
-                    <button type="submit" class="btn btn-sm btn-default">Créer mon compte</button>
                 </form>
+                <div class="col-sm-7 panel-auth-img">
+                    <div class="css-device css-device--mobile">
+                        <img class="css-device__image" src="img/plumo-test.svg">
+                    </div>
+                </div>
             </div>
         </div>
     </div>

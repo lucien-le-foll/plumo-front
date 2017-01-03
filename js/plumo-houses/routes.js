@@ -2,8 +2,9 @@
     
     angular.module('plumo-houses').config(Config);
 
-    Config.$inject=["$stateProvider","$urlRouterProvider"]
-    function Config($stateProvider, $urlRouterProvider){
+    Config.$inject=["$stateProvider"]
+    function Config($stateProvider){
+
         $stateProvider.state('app.house', {
             url:"/house",
             templateUrl:"views/plumo-houses/index.html",
@@ -11,11 +12,10 @@
             controllerAs:"$ctrl",
             resolve: {
                 house : ['HousesService',function(HousesService){
-                    return HousesService.getUserHouse().then(function(data){
-                        return data;
-                    }, function(response){
-                        return null;
-                    });
+                    return {
+                        name : 'MA MAISON',
+                        description : 'LA DESCRIPTION'
+                    };
                 }]
             }
         });

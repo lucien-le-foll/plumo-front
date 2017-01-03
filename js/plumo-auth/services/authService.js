@@ -17,7 +17,7 @@
                     })
                     .then(function (response) {
                         AuthToken.setToken(response.data.token);
-                        return data;
+                        return response.data;
                     });
             };
 
@@ -42,10 +42,6 @@
                     return $http.get('/api/me', {cache: true});
                 else
                     return $q.reject({message: 'User has no token.'});
-            };
-
-            authFactory.createSampleUser = function () {
-                $http.post('/api/sample');
             };
 
             // return auth factory object

@@ -13,11 +13,9 @@ body{
 }
 
 
-#panel-login {
-	margin: auto;
-}
-
 .grey-dark-button{
+	// padding-top:20px;
+	// padding-bottom:20px;
 	color: white;
 	background-color: $grey-darker;
 	border-radius: 0;
@@ -29,70 +27,84 @@ body{
 		text-decoration: none;
 	}
 }
-#intro-logo{
-	img{
-		position: absolute;
-		padding-top: 70px;
-		width: 150px;
-		margin-left: 50px;
-	}
-}
-#intro{
-	color: $grey-darker;
-	position: relative;
-	z-index: 1000;
-	padding-top: 15%;
+#intro-fluid{
+	background-color:$grey-darker;
+	padding:0px;
+	height:100%;
+	#intro{
+		height: 70%;
+		margin:0px;
+		background-image: url(../img/3.jpg);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		border-radius: 0px;
+		padding:0px;
+		#intro-title{
+			font-size:40px;
+			font-weight: bold;
+		}
+		#intro-p{
+			text-align: justify;
+		}
+		#intro-logo{
+			img{
+				margin-left: -250px;
+				width: 150px;
+				padding-top: 55px;
+			}
+		}
+		#intro-button{
+			padding-bottom: 24px;
+			.grey-dark-button{
+				font-size:25px;
 
-	#intro-titre{
-		font-size: 40px;
-		font-weight: bold;
-	}
-	#intro-p{
-		font-size: 20px;
-		text-align: justify;
-
-	}
-	#intro-button{
-		a{
-			font-size: 20px;
-			padding:15px
-
+				padding-top:15px;
+				padding-bottom: 15px;
+			}
 		}
 	}
 }
-.carousel{
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 0;
-	.carousel-page{
-		width: 100%;
-		height: 75%;
+
+#downloads{
+	background-color:$grey-darker;
+	border-radius:0px;
+	color:white;
+	h2{
+		margin-top: - 30px;
+		color:$grey-lighter;
+		text-align:center;
+		font-weight: 50;
+		margin-bottom: 20px;
 	}
-	#slide1{
-		background-image: url("../img/3.jpg");
-		background-repeat: no-repeat;
-		background-size: 100%;
+	#badges{
+		#badge-android{
+			background-image:url(/img/badge-android.png);
+			background-repeat: no-repeat;
+			background-position: 30% 10%;
+			height: 90px;
+			background-size: 100%;
+
+
+		}
+		#badge-ios{
+			background-image:url(/img/badge-ios.png);
+			background-repeat: no-repeat;
+			background-position: 30% 10%;
+			height: 90px;
+			background-size: 100%;
+		}
 	}
 }
 
-#apps-download{
-	background-color: $grey-darker;
-}
+
+
 
 #panel-login {
-    margin: auto;
-}
-
-
-#panel-login {
-    margin: auto;
+	margin: auto;
 }
 .row {
-    margin-left:0px;
-    margin-right:0px;
+	margin-left:0px;
+	margin-right:0px;
 }
 #wrapper {
 //height: $height1;
@@ -112,106 +124,106 @@ transition: all .4s ease 0s;
     box-shadow:10px 0 10px rgba(0,0,0,0.3);
 }
 .sidebar-nav {
-    display: block;
-    float: left;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: $width0;
-    li {
-        line-height: 60px;
-        text-indent: 20px;
-        font-size: 16px;
-        a {
-            -moz-transition: background .5s;
-            -ms-transition: background .5s;
-            -o-transition: background .5s;
-            -webkit-transition: background .5s;
-            background: $color4;
-            border-bottom: 1px solid $color3;
-            border-top: 1px solid $color2;
-            color: $color0;
-            color: $color0;
-            display: block;
-            display: block;
-            float: left;
-            text-decoration: none;
-            text-decoration: none;
-            transition: background .5s;
-            width: $width0;
-            &:hover {
-                background: rgba(255,255,255,0.2);
-                color: $color1;
-                text-decoration: none;
-            }
-            &:active {
-                text-decoration: none;
-            }
-            &:focus {
-                text-decoration: none;
-            }
-        }
-    }
+	display: block;
+	float: left;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: $width0;
+	li {
+		line-height: 60px;
+		text-indent: 20px;
+		font-size: 16px;
+		a {
+			-moz-transition: background .5s;
+			-ms-transition: background .5s;
+			-o-transition: background .5s;
+			-webkit-transition: background .5s;
+			background: $color4;
+			border-bottom: 1px solid $color3;
+			border-top: 1px solid $color2;
+			color: $color0;
+			color: $color0;
+			display: block;
+			display: block;
+			float: left;
+			text-decoration: none;
+			text-decoration: none;
+			transition: background .5s;
+			width: $width0;
+			&:hover {
+				background: rgba(255,255,255,0.2);
+				color: $color1;
+				text-decoration: none;
+			}
+			&:active {
+				text-decoration: none;
+			}
+			&:focus {
+				text-decoration: none;
+			}
+		}
+	}
 }
 #page-content-wrapper {
-    height: auto;
-    margin-left: 0;
-    padding-left: 0;
-    width: $width1;
-    width: $width1;
+	height: auto;
+	margin-left: 0;
+	padding-left: 0;
+	width: $width1;
+	width: $width1;
 }
 #wrapper.active {
-    padding-left: 150px;
-    #sidebar-wrapper {
-        left: $width0;
-        transition: all .4s ease 0s;
-        width: $width0;
-    }
+	padding-left: 150px;
+	#sidebar-wrapper {
+		left: $width0;
+		transition: all .4s ease 0s;
+		width: $width0;
+	}
 }
 #sidebar_menu {
-    li {
-        a {
-            -moz-transition: background .5s;
-            -ms-transition: background .5s;
-            -o-transition: background .5s;
-            -webkit-transition: background .5s;
-            background: $color4;
-            border-bottom: 1px solid $color3;
-            border-top: 1px solid $color2;
-            color: $color1;
-            display: block;
-            float: left;
-            text-decoration: none;
-            transition: background .5s;
-            width: $width0;
-            img {
-                width:65px;
-                float: right;
-                padding-top: 60px;
-                padding-right: 5px;
-            }
-        }
-        #menu-toggle{
-            background: -webkit-linear-gradient(#15f4be, #25c7d4);
-        }
-    }
+	li {
+		a {
+			-moz-transition: background .5s;
+			-ms-transition: background .5s;
+			-o-transition: background .5s;
+			-webkit-transition: background .5s;
+			background: $color4;
+			border-bottom: 1px solid $color3;
+			border-top: 1px solid $color2;
+			color: $color1;
+			display: block;
+			float: left;
+			text-decoration: none;
+			transition: background .5s;
+			width: $width0;
+			img {
+				width:65px;
+				float: right;
+				padding-top: 60px;
+				padding-right: 5px;
+			}
+		}
+		#menu-toggle{
+			background: -webkit-linear-gradient(#15f4be, #25c7d4);
+		}
+	}
 }
 .sidebar_name {
-    color: $color1;
-    opacity: .7;
-    padding-top: 25px;
+	color: $color1;
+	opacity: .7;
+	padding-top: 25px;
 }
 .sidebar-nav >.sidebar-brand {
-    font-size: 18px;
-    height: 200px;
-    line-height: 200px;
-    a {
-        color: $color1;
-        &:hover {
-            background: none;
-            color: $color1;
-        }
-    }
+	font-size: 18px;
+	height: 200px;
+	line-height: 200px;
+	a {
+		color: $color1;
+		&:hover {
+			background: none;
+			color: $color1;
+		}
+	}
 }
 
 #sidebar {
@@ -251,32 +263,32 @@ transition: all .4s ease 0s;
 }
 
 #main_icon {
-    float:right;
-    padding-right: 29px;
-    padding-top:12px;
+	float:right;
+	padding-right: 29px;
+	padding-top:12px;
 }
 .sub_icon {
-    float:right;
-    padding-right: 20px;
-    padding-top: 14px;
+	float:right;
+	padding-right: 20px;
+	padding-top: 14px;
 }
 .content-header {
-    height: $height0;
-    line-height: $height0;
-    h1 {
-        display: inline-block;
-        line-height: $height0;
-        margin-left: 20px;
-        margin: 0;
-    }
+	height: $height0;
+	line-height: $height0;
+	h1 {
+		display: inline-block;
+		line-height: $height0;
+		margin-left: 20px;
+		margin: 0;
+	}
 }
 
 
 footer{
-    background-color: $color0;
-    color: white;
-    padding: 6px;
-    text-align: right;
+	background-color: $color0;
+	color: white;
+	padding: 6px;
+	text-align: right;
 
 
 }
@@ -286,20 +298,20 @@ footer{
     text-align: center;
 }
 .footer-info a{
-    text-decoration: none;
-    color: white;
+	text-decoration: none;
+	color: white;
 }
 
 .footer-social img{
-    width: 30px;
-    margin-left: 3px;
+	width: 30px;
+	margin-left: 3px;
 }
 
 footer .navbar-fixed-bottom{
-    bottom: 0px;
-    position: fixed;
-    width: 100%;
-    height: 100px;
+	bottom: 0px;
+	position: fixed;
+	width: 100%;
+	height: 100px;
 
 }
 

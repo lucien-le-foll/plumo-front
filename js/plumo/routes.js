@@ -6,12 +6,6 @@
     function Config($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise("/");
 
-        $stateProvider.state('app', {
-            abstract: true,
-            url: "",
-            templateUrl: "views/common/app.html"
-        });
-
         $stateProvider.state('blank', {
             abstract: true,
             url: '',
@@ -21,6 +15,12 @@
         $stateProvider.state('blank.landing', {
             url: "/",
             templateUrl: "views/plumo/landing.html"
+        });
+
+        $stateProvider.state('app', {
+            abstract: true,
+            url: '',
+            templateUrl: "views/common/app.html"
         });
     }
 

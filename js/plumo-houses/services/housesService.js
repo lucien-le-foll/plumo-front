@@ -2,16 +2,30 @@
 
     angular.module('plumo-houses').factory('HousesService', Factory);
 
-    Factory.$inject = ['$http', 'API_URL'];
-    function Factory($http, API_URL) {
-        var housesService = {};
+    Factory.$inject = ['HTTPClient'];
+    function Factory(HTTPClient) {
+        return {
+            getCurrentHouse: function () {
+                return HTTPClient.get('/user/house').then(function (response) {
+                    return response.data;
+                }, function (response) {
+                    return response;
+                });
+            },
+            saveHouse: function (house) {
+                var httpObject = angular.copy(house);
 
-        housesService.getHouses = function () {
-            return $http.get(API_URL + '/house').then(function (response) {
-                return response.data;
-            })
+                if (angular.isDefined(httpObject.id)) {
+                    return HTTPClient.put('/house/' + httpObject.id, httpObject).then(function (response) {
+                        return response.data;
+                    });
+                }
+                else {
+                    return HTTPClient.post('/house', httpObject).then(function (response) {
+                        return response.data;
+                    });
+                }
+            }
         };
-
-        return housesService;
     }
 })(angular);

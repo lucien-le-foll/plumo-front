@@ -6,6 +6,8 @@
 
 @import 'variables';
 @import 'form';
+@import 'landing';
+@import 'new-age';
 @import url(http://fonts.googleapis.com/css?family=Lato); //A integrer plus tard
 
 body{
@@ -112,16 +114,16 @@ padding-left: 70px;
 transition: all .4s ease 0s;
 }
 #sidebar-wrapper {
-    background: $color0;
-    height: $height1;
-    left: 70px;
-    margin-left: -250px;
-    position: fixed;
-    transition: all .4s ease 0s;
-    width: $width0;
-    z-index: 10000;
-    top:0;
-    box-shadow:10px 0 10px rgba(0,0,0,0.3);
+	background: $color0;
+	height: $height1;
+	left: 70px;
+	margin-left: -250px;
+	position: fixed;
+	transition: all .4s ease 0s;
+	width: $width0;
+	z-index: 10000;
+	top:0;
+	box-shadow:10px 0 10px rgba(0,0,0,0.3);
 }
 .sidebar-nav {
 	display: block;
@@ -227,39 +229,39 @@ transition: all .4s ease 0s;
 }
 
 #sidebar {
-    li{
-        &:nth-child(1){
-            a {
-                background: $turquoise-primary;
-                &:hover{
-                    background: lighten($turquoise-primary, 10%)
-                }
-            }
-        }
-        &:nth-child(2){
-            a {
-                background: $bleu-primary;
-                &:hover{
-                    background: lighten($bleu-primary, 10%)
-                }
-            }
-        }
-        &:nth-child(3){
-            a {
-                background: $rouge-primary;
-                &:hover{
-                    background: lighten($rouge-primary, 10%)
-                }
-            }
-        }
-        a {
-            color:white;
-            box-shadow:inset 0px 4px 10px rgba(0, 0, 0, 0.3);
-            img {
-                width: 52px;
-            }
-        }
-    }
+	li{
+		&:nth-child(1){
+			a {
+				background: $turquoise-primary;
+				&:hover{
+					background: lighten($turquoise-primary, 10%)
+				}
+			}
+		}
+		&:nth-child(2){
+			a {
+				background: $bleu-primary;
+				&:hover{
+					background: lighten($bleu-primary, 10%)
+				}
+			}
+		}
+		&:nth-child(3){
+			a {
+				background: $rouge-primary;
+				&:hover{
+					background: lighten($rouge-primary, 10%)
+				}
+			}
+		}
+		a {
+			color:white;
+			box-shadow:inset 0px 4px 10px rgba(0, 0, 0, 0.3);
+			img {
+				width: 52px;
+			}
+		}
+	}
 }
 
 #main_icon {
@@ -294,8 +296,8 @@ footer{
 }
 
 .footer-info{
-    padding: 4px 0 0 0;
-    text-align: center;
+	padding: 4px 0 0 0;
+	text-align: center;
 }
 .footer-info a{
 	text-decoration: none;

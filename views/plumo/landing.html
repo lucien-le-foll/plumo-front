@@ -1,43 +1,103 @@
-<div class="container-fluid" id="intro-fluid">    
-  <div class="jumbotron" id="intro">
-    <div class="container">
-      <div id="intro-logo">
-        <img src="../img/logo-noir.png" alt="">
-      </div>
-      <div class="row">
-        <div class="col-md-5">
-          <h1 id="intro-title">Pour une meilleure ambiance au sein de votre foyer</h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-7">
-          <p id="intro-p">
-            moles ero qui sitiusam, cupta doluptiam est everum delles et eume volorepedit quis maio magnisi blandignatia que dellace aquodit hitatium solorro bernatem aut quae veri doluptas dolo molor re, sumquo diam que site re versperum enimodit erat reritatium dolo
-          </p>
-        </div>
-    <div class="row" id="intro">
-        <div class="col-xs-offset-2 col-xs-8">
+        <div class="first-section">
+          <div class="container">
             <div class="row">
-                <h1 id="intro-titre" class="col-xs-6">Pour une meilleure ambiance au sein de votre foyer</h1>
-            </div>
-            <div class="row">
-                <div class="col-md-8">
-                    <p id="intro-p">moles ero qui sitiusam, cupta doluptiam est everum delles et eume volorepedit quis maio magnisi blandignatia que dellace aquodit
-                        hitatium solorro bernatem aut quae veri doluptas dolo molor re,sumquo diam que site re versperum enimodit erat reritatium dolo</p>               
-                    </div>
-                </div>
-                <div class="row" id="intro-button">
-                    <div class="col-md-3">
-                        <a class="btn btn-lg btn-default grey-dark-button" href="#" role="button">Télécharger Plumo</a>
-                    </div>
-                    <div class="col-md-3">
-                       <a class="btn btn-lg btn-default grey-dark-button" ui-sref="blank.register" role="button">S'inscrire</a>
-                   </div>
-                   <div class="col-md-3">
-                    <a class="btn btn-lg btn-default grey-dark-button" ui-sref="blank.login" role="button">Se connecter</a>
-                </div>
+              <div class="col-sm-7">
+                <div class="header-content">
 
+                  <img id="logo" src="../img/logo-blanc.png" alt="">
+
+                  <div class="header-content-inner">
+                    <h1>Pour une meilleure ambiance au sein de votre foyer</h1>
+                    <a ui-sref="blank.register" class="btn btn-outline btn-xl page-scroll">S'inscrire</a>
+                    <a ui-sref="blank.login" class="btn btn-outline btn-xl page-scroll">Se connecter</a>
+                    <a href="#downloads" class="btn btn-outline btn-xl page-scroll">Télécharger</a>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
+
+      <section id="downloads" class="download bg-primary text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <h2 class="section-heading">Découvrez notre application</h2>
+              <p>Organisez la vie à la maison plus simplement, grâce à Plumo</p>
+              <div class="badges">
+                <a class="badge-link" href="#"><img src="../img/google-play-badge.svg" alt=""></a>
+                <a class="badge-link" href="#"><img src="../img/app-store-badge.svg" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="features">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <div class="section-heading">
+                <h2>Des tâches réparties, une ambiance assainie</h2>
+                <p class="text-muted">Découvrez les fonctionnalités de l'application qui vous simplifie la vie</p>
+                <hr>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div id="device-landing" class="css-device css-device--mobile">
+                <img class="css-device__image" src="img/plumo-test.svg">
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div id="option-bloc" class="container-fluid">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="feature-item">
+                      <img id="house" src="../img/maison.svg" alt="">
+                      <h3>Votre Maison</h3>
+                      <p class="text-muted">Personnalisez votre maison, son nom, son nombre de pièces</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="feature-item">
+                      <img id="rooms" src="../img/piece.svg" alt="">
+                      <h3>Pièces</h3>
+                      <p class="text-muted">Perssonalisez vos pièces, les taches qui y sont associées et une photo</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="feature-item">
+                      <img id="tasks" src="../img/tache.svg" alt="">
+                      <h3>Tâches</h3>
+                      <p class="text-muted">Des tâches vous sont proposées, en plus de vos propres tâches</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="feature-item">
+                      <img id="profile" src="../img/profil.svg" alt="">
+                      <h3>Profils</h3>
+                      <p class="text-muted">Invitez les membres de votre foyer via un systeme de profil complet avec administration personnalisable</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="cta">
+          <div class="cta-content">
+            <div class="container">
+              <h2>N'attendez-plus !</h2>
+              <a ui-sref="blank.register" class="btn btn-outline btn-xl page-scroll">Commencer dès à présent !</a>
+            </div>
+          </div>
+          <div class="overlay"></div>
+        </section>
+
+

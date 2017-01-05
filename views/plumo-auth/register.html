@@ -2,18 +2,18 @@
     <div class="col-md-12">
         <div class="panel panel-default">
             <div class="panel-body">
-                <form role="form" ng-submit="$ctrl.attemptLogin(email, password)" class="col-sm-5">
+                <form role="form" ng-submit="$ctrl.register(user)" class="col-sm-5">
                     <div class="content-auth">
                         <img src="../img/logo-blanc.png" alt="+MÖ" class="img-responsive text-center">
                         <h2 class=text-center>Inscrivez-vous</h2><br>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="nom" placeholder="Saisissez votre nom" ng-model="nom">
+                            <input type="text" class="form-control" id="nom" placeholder="Saisissez votre nom" ng-model="user.name">
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" id="email" placeholder="Saisissez votre mail" ng-model="email">
+                            <input type="email" class="form-control" id="email" placeholder="Saisissez votre mail" ng-model="user.email">
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" id="motdepasse" placeholder="Mot de passe" ng-model="password">
+                            <input type="password" class="form-control" id="motdepasse" placeholder="Mot de passe" ng-model="user.password">
                         </div>
                         <button type="submit" class="btn btn-lg btn-default">Créer mon compte</button>
                         <div class="link text-center">

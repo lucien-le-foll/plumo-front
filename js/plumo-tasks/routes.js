@@ -11,7 +11,7 @@
             controllerAs:"$ctrl",
             resolve: {
                 tasks:['TasksService',function(TasksService){
-                    return TasksService.query();
+                    return TasksService.getTasks();
                 }]
             }
         });

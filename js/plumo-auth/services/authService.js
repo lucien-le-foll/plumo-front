@@ -98,8 +98,11 @@
 
             // happens on response errors
             interceptorFactory.responseError = function (response) {
-                AuthToken.setToken();
-                $location.path('/login');
+                if(response.status == '403'){
+                    AuthToken.setToken();
+                    $location.path('/login');
+                }
+                $location.path('/house');
 
                 return $q.reject(response);
             };

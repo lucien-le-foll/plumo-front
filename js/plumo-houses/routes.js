@@ -13,12 +13,20 @@
             resolve: {
                 house: ['HousesService', function (HousesService) {
                     return HousesService.getCurrentHouse().then(function (data) {
-                        return data;
+                        console.log(data);
+                        return data.length === 0 ? { id : null } : data;
                     }, function (response) {
                         alert('ça n\'a pas fonctionné');
                     });
                 }]
             }
+        });
+
+        $stateProvider.state('app.house.edit', {
+            url: "/edit",
+            templateUrl: "views/plumo-houses/edit.html",
+            controller: "HousesEditController",
+            controllerAs: "$ctrl",
         });
     }
 

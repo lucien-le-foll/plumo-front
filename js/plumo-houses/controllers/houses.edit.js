@@ -1,6 +1,6 @@
 (function (angular) {
 
-    angular.module('plumo-houses').controller('HousesController', Controller);
+    angular.module('plumo-houses').controller('HousesEditController', Controller);
 
     Controller.$inject = ['house', 'HousesService'];
     function Controller(house, HousesService) {

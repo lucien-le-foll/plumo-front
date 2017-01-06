@@ -14,8 +14,8 @@
             },
             saveHouse: function (house) {
                 var httpObject = angular.copy(house);
-
-                if (angular.isDefined(httpObject.id)) {
+                console.log(house);
+                if (httpObject.id!==null) {
                     return HTTPClient.put('/house/' + httpObject.id, httpObject).then(function (response) {
                         return response.data;
                     });

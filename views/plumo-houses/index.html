@@ -1,11 +1,126 @@
 <div class="row">
-    <div class="col-sm-12 text-center">
-        <div ng-if="angular.isDefined($ctrl.house)">
+    <div class="col-sm-12">
+        <div ng-if="$ctrl.house.id!==null">
             <h1>{{ $ctrl.house.name }}</h1>
-            <p>{{ $ctrl.house.description }}</p>
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center">
+                        <h3>Maison et ses pièces</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table">
+                            <thead>
+                                <th>Nom de la pièce</th>
+                                <th>Description</th>
+                                <th>Modifier</th>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="room in $ctrl.house.rooms">
+                                    <td>{{room.name}}</td>
+                                    <td>{{room.description}}</td>
+                                    <td>X</td>
+                                </tr>
+                                <tr ng-if="$ctrl.newRoom">
+                                    <form role="form" ng-submit="$ctrl.saveHouse($ctrl.house)">
+                                        <td>                                        
+                                            <input type="text" class="form-control" id="room" placeholder="Nom de la pièce" ng-model="$ctrl.newRoom.name">
+                                        </td>
+                                        <td>
+                                            <input type="text" class=" form-control" id="description-room" placeholder="Description de la pièce" ng-model="$ctrl.newRoom.description">
+                                        </td>
+                                        <td>
+                                            <a ng-click="$ctrl.addRoom($ctrl.newRoom)">Valider</a>
+                                        </td>
+                                    </form>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <a class="btn btn-sm btn-default" ng-click="$ctrl.displayNewroom()">Ajouter une pièce</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center">
+                        <h3>Tâches</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table">
+                            <thead>
+                                <th>Nom de la tâche</th>
+                                <th>Pièce concernée</th>
+                                <th>Date limite</th>
+                                <th>Protagoniste</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Faire à manger</td>
+                                    <td>Cuisine</td>
+                                    <td>24/01/2017</td>
+                                    <td>Séverine</td>
+                                </tr>
+                                <tr>
+                                    <td>Nettoyer les vitres</td>
+                                    <td>Toutes les pièces</td>
+                                    <td>24/01/2017</td>
+                                    <td>Patrick</td>
+                                </tr>
+                                <tr ng-if="$ctrl.newTask">
+                                    <form role="form" ng-submit="$ctrl.saveTask($ctrl.house)">
+                                        <td>                                        
+                                            <input type="text" class="form-control" id="task" placeholder="Nom de la tâche" ng-model="$ctrl.newTask.name">
+                                        </td>
+                                        <td>
+                                            <select name="Select-room" id="Select-room">
+                                                <option ng-repeat="room in $ctrl.house.rooms" value="{{room.name}}">{{room.name}}</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input type="date" class=" form-control" id="date-task" placeholder="date de la tâche" ng-model="$ctrl.newTask.date">
+                                        </td>
+                                        <td>
+                                            <select name="Select-user" id="Select-user">
+                                                <option ng-repeat="user in $ctrl.house.users" value="{{user.name}}">{{user.name}}</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <a ng-click="$ctrl.addTask($ctrl.newTask)">Valider</a>
+                                        </td>
+                                    </form>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">
+                                        <a class="btn btn-sm btn-default" ng-click="$ctrl.displayNewTask()">Ajouter une tâche</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center">
+                        <h3>Les habitant de {{$ctrl.house.name}}</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td ng-repeat="user in $ctrl.house.users">{{user.name}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <p>{{ $ctrl.house.description }}</p>
-        <div ng-if="!angular.isDefined($ctrl.house)">
+        <div ng-if="$ctrl.house.id===null">
             <div class="col-sm-6 col-sm-offset-3">
                 <ng-include src="'views/plumo-houses/common/house-form.html'"></ng-include>
             </div>

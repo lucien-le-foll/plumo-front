@@ -4,17 +4,23 @@
         <form role="form" ng-submit="$ctrl.saveHouse($ctrl.house)">
             <div class="form-group">
                 <input type="text" class="form-control" id="name" placeholder="Nom du foyer"
-                       ng-model="$ctrl.house.name">
+                ng-model="$ctrl.house.name">
             </div>
             <div class="form-group">
                 <textarea class="form-control" placeholder="Décrivez votre foyer ici"
-                          ng-model="$ctrl.house.description"></textarea>
+                ng-model="$ctrl.house.description"></textarea>
             </div>
             <hr>
-            <div class="form-group">
-                <input type="email" class="form-control" id="piece" placeholder="Pièce">
+            <div ng-repeat="room in $ctrl.house.rooms" class="form-group">
+                <input type="text" class="form-control" id="room" placeholder="Nom de la pièce" value="{{room.name}}">
+                <input type="text" class=" form-control" id="description-room" placeholder="Description de la pièce" value="{{room.description}}">
             </div>
-            <a class="btn btn-sm btn-default">Ajouter une pièce</a>
+            <div ng-if="$ctrl.newRoom">
+                <input type="text" class="form-control" id="room" placeholder="Nom de la pièce" ng-model="$ctrl.newRoom.name">
+                <input type="text" class=" form-control" id="description-room" placeholder="Description de la pièce" ng-model="$ctrl.newRoom.description">
+                <a ng-click="$ctrl.addRoom($ctrl.newRoom)">Ajouter pièces</a>
+            </div>
+            <a class="btn btn-sm btn-default" ng-click="$ctrl.displayNewroom()">Ajouter une pièce</a>
             <button type="submit" class="btn btn-sm btn-default">Créer ma maison</button>
         </form>
     </div>

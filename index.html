@@ -2,6 +2,9 @@
 <html ng-app="plumo">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>+MÖ</title>
 
     <!-- TODO Gérer l'import des polices -->
@@ -9,39 +12,42 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-    <ui-view></ui-view>
 
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<ui-view></ui-view>
 
-    <script src="js/plumo/module.js"></script>
-    <script src="js/plumo/routes.js"></script>
-    <script src="js/plumo/services/httpClient.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <script src="js/plumo-auth/module.js"></script>
-    <script src="js/plumo-auth/routes.js"></script>
-    <script src="js/plumo-auth/services/authService.js"></script>
-    <script src="js/plumo-auth/services/registerService.js"></script>
-    <script src="js/plumo-auth/controllers/authController.js"></script>
-    <script src="js/plumo-auth/controllers/registerController.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-resource/angular-resource.min.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 
-    <script src="js/plumo-houses/module.js"></script>
-    <script src="js/plumo-houses/services/housesService.js"></script>
-    <script src="js/plumo-houses/routes.js"></script>
-    <script src="js/plumo-houses/controllers/houses.js"></script>
+<script src="js/plumo/module.js"></script>
+<script src="js/plumo/routes.js"></script>
+<script src="js/plumo/services/httpClient.js"></script>
 
-    <script src="js/plumo-tasks/module.js"></script>
-    <script src="js/plumo-tasks/routes.js"></script>
-    <script src="js/plumo-tasks/services/tasksService.js"></script>
-    <script src="js/plumo-tasks/controllers/tasks.js"></script>
+<script src="js/plumo-auth/module.js"></script>
+<script src="js/plumo-auth/routes.js"></script>
+<script src="js/plumo-auth/services/authService.js"></script>
+<script src="js/plumo-auth/services/registerService.js"></script>
+<script src="js/plumo-auth/controllers/authController.js"></script>
+<script src="js/plumo-auth/controllers/registerController.js"></script>
 
-    <script src="js/plumo-rooms/module.js"></script>
-    <script src="js/plumo-rooms/routes.js"></script>
-    <script src="js/plumo-rooms/services/roomsService.js"></script>
-    <script src="js/plumo-rooms/controllers/rooms.js"></script>
+<script src="js/plumo-houses/module.js"></script>
+<script src="js/plumo-houses/services/housesService.js"></script>
+<script src="js/plumo-houses/routes.js"></script>
+<script src="js/plumo-houses/controllers/houses.js"></script>
+
+<script src="js/plumo-tasks/module.js"></script>
+<script src="js/plumo-tasks/routes.js"></script>
+<script src="js/plumo-tasks/services/tasksService.js"></script>
+<script src="js/plumo-tasks/controllers/tasks.js"></script>
+
+<script src="js/plumo-rooms/module.js"></script>
+<script src="js/plumo-rooms/services/roomsService.js"></script>
+<script src="js/plumo-rooms/controllers/rooms.js"></script>
+
+<script src="js/plumo-users/module.js"></script>
+<script src="js/plumo-users/components/users-list.js"></script>
 </body>
 </html>

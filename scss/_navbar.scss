@@ -1,0 +1,13 @@
+.navbar {
+  background: -webkit-linear-gradient(#15f4be, #25c7d4);
+  
+  .navbar-brand {
+    color: #fff;
+  }
+  
+  li {
+    a {
+      color: $grey-darker;
+    }
+  }
+}

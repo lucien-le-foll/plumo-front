@@ -102,7 +102,7 @@
                     AuthToken.setToken();
                     $location.path('/login');
                 }
-                $location.path('/house');
+                $location.path('/login');
 
                 return $q.reject(response);
             };

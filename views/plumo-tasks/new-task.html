@@ -1,0 +1,32 @@
+<table class="table">
+    <tbody>
+        <tr ng-if="$ctrl.newTask">
+            <form role="form">
+                <td>                                        
+                    <input type="text" class="form-control" id="task" placeholder="Nom de la tâche" ng-model="newTask.name">
+                </td>
+                <td>
+                    <select name="Select-room" id="Select-room" ng-model="newTask.room">
+                        <option ng-repeat="room in $ctrl.house.rooms" value="{{room.name}}">{{room.name}}</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="date" class=" form-control" id="date-task" placeholder="date de la tâche" ng-model="newTask.date">
+                </td>
+                <td>
+                    <select name="Select-user" id="Select-user" ng-model="newTask.user">
+                        <option ng-repeat="user in $ctrl.house.users" value="{{user.name}}">{{user.name}}</option>
+                    </select>
+                </td>
+                <td>
+                    <a ng-click="$ctrl.addTask(newTask)">Valider</a>
+                </td>
+            </form>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <a class="btn btn-sm btn-default" ng-click="$ctrl.displayNewTask()">Ajouter une tâche</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

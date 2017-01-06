@@ -1,0 +1,16 @@
+<table class="table">
+    <tbody>
+        <thead>
+            <th>Nom de la tâche</th>
+            <th>Pièce concernée</th>
+            <th>Date limite</th>
+            <th>Protagoniste</th>
+        </thead>
+        <tr ng-repeat="task in $ctrl.tasks">
+            <td>{{task.name}}</td>
+            <td>{{task.room}}</td>
+            <td>{{task.date}}</td>
+            <td>{{task.user}}</td>
+        </tr>
+    </tbody>
+</table>

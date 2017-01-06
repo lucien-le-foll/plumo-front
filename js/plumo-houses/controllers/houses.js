@@ -8,6 +8,7 @@
 
         $ctrl.house = house;
         $ctrl.house.rooms=[{name:'salle de bain', description:'l\'endroit où on se lave'}];
+        $ctrl.house.tasks = [];
         $ctrl.newRoom=null;
 
         $ctrl.saveHouse = function (house) {

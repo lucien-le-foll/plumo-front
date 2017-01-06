@@ -49,56 +49,8 @@
                         <h3>Tâches</h3>
                     </div>
                     <div class="panel-body">
-                        <table class="table">
-                            <thead>
-                                <th>Nom de la tâche</th>
-                                <th>Pièce concernée</th>
-                                <th>Date limite</th>
-                                <th>Protagoniste</th>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Faire à manger</td>
-                                    <td>Cuisine</td>
-                                    <td>24/01/2017</td>
-                                    <td>Séverine</td>
-                                </tr>
-                                <tr>
-                                    <td>Nettoyer les vitres</td>
-                                    <td>Toutes les pièces</td>
-                                    <td>24/01/2017</td>
-                                    <td>Patrick</td>
-                                </tr>
-                                <tr ng-if="$ctrl.newTask">
-                                    <form role="form" ng-submit="$ctrl.saveTask($ctrl.house)">
-                                        <td>                                        
-                                            <input type="text" class="form-control" id="task" placeholder="Nom de la tâche" ng-model="$ctrl.newTask.name">
-                                        </td>
-                                        <td>
-                                            <select name="Select-room" id="Select-room">
-                                                <option ng-repeat="room in $ctrl.house.rooms" value="{{room.name}}">{{room.name}}</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <input type="date" class=" form-control" id="date-task" placeholder="date de la tâche" ng-model="$ctrl.newTask.date">
-                                        </td>
-                                        <td>
-                                            <select name="Select-user" id="Select-user">
-                                                <option ng-repeat="user in $ctrl.house.users" value="{{user.name}}">{{user.name}}</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <a ng-click="$ctrl.addTask($ctrl.newTask)">Valider</a>
-                                        </td>
-                                    </form>
-                                </tr>
-                                <tr>
-                                    <td colspan="4">
-                                        <a class="btn btn-sm btn-default" ng-click="$ctrl.displayNewTask()">Ajouter une tâche</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <plumo-list-tasks tasks="$ctrl.house.tasks"></plumo-list-tasks>
+                        <plumo-new-task house="$ctrl.house"></plumo-new-task>                    
                     </div>
                 </div>
             </div>

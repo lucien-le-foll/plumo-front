@@ -8,15 +8,17 @@
             getCurrentHouse: function () {
                 return HTTPClient.get('/user/house').then(function (response) {
                     return response.data;
+                    console.log(data);
                 }, function (response) {
                     return response;
                 });
             },
             saveHouse: function (house) {
+                // TODO intégrer l'ajout de pièces à la création
                 var httpObject = angular.copy(house);
-                console.log(house);
-                if (httpObject.id!==null) {
-                    return HTTPClient.put('/house/' + httpObject.id, httpObject).then(function (response) {
+                delete httpObject.id;
+                if (house.id!==null) {
+                    return HTTPClient.put('/house/' + house.id, httpObject).then(function (response) {
                         return response.data;
                     });
                 }

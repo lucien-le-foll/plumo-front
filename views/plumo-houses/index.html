@@ -1,47 +1,14 @@
 <div class="row">
     <div class="col-sm-12">
         <div ng-if="$ctrl.house.id!==null">
-            <h1>{{ $ctrl.house.name }}</h1>
+            <h1>
+                {{ $ctrl.house.name }}
+                <button class="btn btn-default pull-right" ng-click="$ctrl.saveHouse($ctrl.house)">
+                    <i class="glyphicon glyphicon-floppy-save"></i>
+                </button>
+            </h1>
             <div class="col-md-3">
-                <div class="panel panel-default">
-                    <div class="panel-heading text-center">
-                        <h3>Maison et ses pièces</h3>
-                    </div>
-                    <div class="panel-body">
-                        <table class="table">
-                            <thead>
-                                <th>Nom de la pièce</th>
-                                <th>Description</th>
-                                <th>Modifier</th>
-                            </thead>
-                            <tbody>
-                                <tr ng-repeat="room in $ctrl.house.rooms">
-                                    <td>{{room.name}}</td>
-                                    <td>{{room.description}}</td>
-                                    <td>X</td>
-                                </tr>
-                                <tr ng-if="$ctrl.newRoom">
-                                    <form role="form" ng-submit="$ctrl.saveHouse($ctrl.house)">
-                                        <td>                                        
-                                            <input type="text" class="form-control" id="room" placeholder="Nom de la pièce" ng-model="$ctrl.newRoom.name">
-                                        </td>
-                                        <td>
-                                            <input type="text" class=" form-control" id="description-room" placeholder="Description de la pièce" ng-model="$ctrl.newRoom.description">
-                                        </td>
-                                        <td>
-                                            <a ng-click="$ctrl.addRoom($ctrl.newRoom)">Valider</a>
-                                        </td>
-                                    </form>
-                                </tr>
-                                <tr>
-                                    <td colspan="3">
-                                        <a class="btn btn-sm btn-default" ng-click="$ctrl.displayNewroom()">Ajouter une pièce</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                <plumo-rooms-list rooms="$ctrl.house.rooms"></plumo-rooms-list>
             </div>
             <div class="col-md-6">
                 <div class="panel panel-default">

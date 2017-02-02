@@ -5,9 +5,10 @@
 	overflow-y: hidden;
 	background: url(../img/PHOTO-plumo1.jpg), #2b2e37;
 	background: url(../img/PHOTO-plumo1.jpg), linear-gradient(to left, #2b2e37, #2b2e37);
+	background-repeat: no-repeat;
 	background-color: #2b2e37;
 	color: #fff;
-	background-size: 100%;
+	background-size: cover;
 	.header-content {
 		text-align: center;
 		padding: 150px 0 50px;

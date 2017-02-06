@@ -9,10 +9,8 @@
         $ctrl.house = house;
 
         $ctrl.saveHouse = function (house) {
-            HousesService.saveHouse(house).then(function (data) {
-                $ctrl.house = data;
-            }, function (response) {
-                console.log(response);
+            HousesService.saveHouse(house).then(function (response) {
+                $ctrl.house = response.data;
             });
         }
     }

@@ -12,8 +12,8 @@
             controllerAs: "$ctrl",
             resolve: {
                 house: ['$state', 'HousesService', function ($state, HousesService) {
-                    return HousesService.getHouse().then(function (data) {
-                        return data;
+                    return HousesService.getHouse().then(function (response) {
+                        return response.data;
                     }, function(error){
                         console.log(error);
                         if(error.code == 404){

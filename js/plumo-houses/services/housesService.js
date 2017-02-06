@@ -11,10 +11,9 @@
             saveHouse: function (house) {
                 var httpObject = angular.copy(house);
                 delete httpObject.id;
-                if (house.id!==null) {
+                if (house.id) {
                     return HTTPClient.put('/house/' + house.id, httpObject);
-                }
-                else {
+                } else {
                     return HTTPClient.post('/house', httpObject);
                 }
             }

@@ -4,7 +4,8 @@
     angular.module('plumo', [
             'ui.router',
             'plumo-auth',
-            'plumo-houses'
+            'plumo-houses',
+            'plumo-tasks'
         ])
         .constant('API_URL', 'http://plumoapi.codeandroses.com/api')
         .config(function ($httpProvider, $qProvider) {

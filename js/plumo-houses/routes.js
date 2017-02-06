@@ -2,7 +2,7 @@
 
     angular.module('plumo-houses').config(Config);
 
-    Config.$inject = ["$stateProvider"]
+    Config.$inject = ["$stateProvider"];
     function Config($stateProvider) {
 
         $stateProvider.state('app.house', {
@@ -11,12 +11,16 @@
             controller: "HousesController",
             controllerAs: "$ctrl",
             resolve: {
-                house: ['HousesService', function (HousesService) {
-                    return HousesService.getCurrentHouse().then(function (data) {
-                        console.log(data);
-                        return data.length === 0 ? { id : null } : data;
-                    }, function (response) {
-                        alert('ça n\'a pas fonctionné');
+                house: ['$state', 'HousesService', function ($state, HousesService) {
+                    return HousesService.getHouse().then(function (data) {
+                        return data;
+                    }, function(error){
+                        console.log(error);
+                        if(error.code == 404){
+                            return undefined;
+                        } else {
+                            $state.go('blank.landing');
+                        }
                     });
                 }]
             }

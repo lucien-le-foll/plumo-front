@@ -1,12 +1,20 @@
 <div class="row">
     <div class="col-sm-12">
-        <div ng-if="!$ctrl.house.id">
+        <div ng-if="!$ctrl.house.id" class="row">
             <div class="col-sm-6 col-sm-offset-3">
                 <ng-include src="'views/plumo-houses/common/house-form.html'"></ng-include>
             </div>
         </div>
-        <div ng-if="$ctrl.house.id">
-            <plumo-tasks-list tasks="$ctrl.house.tasks"></plumo-tasks-list>
+        <div ng-if="$ctrl.house.id" class="row">
+            <div class="col-sm-4">
+                <plumo-tasks-component tasks="$ctrl.house.tasks"></plumo-tasks-component>
+            </div>
+            <div class="col-sm-4">
+                <plumo-rooms-component rooms="$ctrl.house.rooms"></plumo-rooms-component>
+            </div>
+            <div class="col-sm-4">
+                <plumo-users-component house="$ctrl.house"></plumo-users-component>
+            </div>
         </div>
     </div>
 </div>

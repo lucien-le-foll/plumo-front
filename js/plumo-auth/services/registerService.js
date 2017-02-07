@@ -6,7 +6,6 @@
     function Factory(HTTPClient, AuthToken) {
         return {
             register: function (name, email, password) {
-                console.log(email)
                 return  HTTPClient.post('/user', {
                     name : name,
                     email : email,

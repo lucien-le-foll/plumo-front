@@ -99,9 +99,12 @@
             // happens on response errors
             interceptorFactory.responseError = function (response) {
                 if(response.status != 404){
+                    AuthToken.setToken();
                     $location.path('/');
                     return $q.reject(response);
                 }
+
+                return $q.defer(response);
             };
 
             return interceptorFactory;

@@ -5,6 +5,7 @@
 @import 'new-age';
 @import 'maison';
 @import 'navbar';
+@import 'profile';
 @import url(http://fonts.googleapis.com/css?family=Lato); //A integrer plus tard
 
 body{
@@ -12,7 +13,7 @@ body{
 }
 
 .no-margin-left {
-    margin-left: -70px;
+	margin-left: -70px;
 }
 
 #panel-login {

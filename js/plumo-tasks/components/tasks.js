@@ -1,16 +1,15 @@
 (function (angular) {
 
-    angular.module('plumo-tasks').component('plumoTasksList', {
+    angular.module('plumo-tasks').component('plumoTasksComponent', {
         bindings: {
             tasks: '='
         },
-        templateUrl: 'views/plumo-tasks/components/list.html',
+        templateUrl: 'views/plumo-tasks/components/tasks.html',
         controller: Controller
     });
 
     Controller.$inject = [];
     function Controller() {
         var $ctrl = this;
-        console.log('coucou');
     }
 })(angular);

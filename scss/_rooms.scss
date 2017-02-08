@@ -1,0 +1,70 @@
+$bg-logo:#15f4be;
+$house:#25c7d4;
+$task:#3896ee;
+$profile:#e74738;
+$grey-darker:#2b2e37;
+$grey-lighter:#d8d4d5;
+
+// Color variables (appears count calculates by raw css)
+$color0: #2b2e37; // Appears 4 times
+$color1: #ffffff; // Appears 3 times
+$color2: #373737; // Appears 2 times
+$color3: #1a1a1a; // Appears 2 times
+$color4: #252525; // Appears 2 times
+
+$turquoise:#15f4be;
+$turquoise-primary:#25c7d4;
+$bleu-primary:#3896ee;
+$rouge-primary:#e74738;
+
+// Width variables (appears count calculates by raw css)
+$width0: 250px; // Appears 5 times
+$width1: 100%; // Appears 2 times
+
+// Height variables (appears count calculates by raw css)
+$height0: 65px; // Appears 2 times
+$height1: 100%; // Appears 2 times
+
+
+
+// .hovereffect {
+// 	height: 140px;
+
+// }
+
+/*.hovereffect {
+
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	float: none;
+}
+
+.hovereffect > img {
+	vertical-align: middle;
+}
+
+div.text_hover {
+  background: $grey-darker;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  display: table;
+  line-height: 140px;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  width: 140px;
+  transition-duration:300ms;
+}
+
+div.text_hover span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.hovereffect:hover div.text_hover {
+	opacity: 0.7;
+}
+*/

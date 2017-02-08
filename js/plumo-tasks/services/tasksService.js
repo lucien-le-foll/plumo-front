@@ -3,22 +3,9 @@
     Factory.$inject = ['HTTPClient'];
     function Factory(HTTPClient) {
         return {
-            getTasks : function(){
-                return [
-                    {
-                        name : 'faire la vaisselle',
-                        description : 'zienfpznepf'
-                    },
-                    {
-                        name : 'faire la vaisselle',
-                        description : 'zienfpznepf'
-                    },
-                    {
-                        name : 'faire la vaisselle',
-                        description : 'zienfpznepf'
-                    }
-                ]
+            performTask : function(task) {
+                return HTTPClient.get('/task/perform/'+task.id);
             }
         };
     }
-})(angular)
+})(angular);

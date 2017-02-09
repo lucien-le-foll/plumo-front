@@ -1,28 +1,18 @@
 (function (angular) {
-    angular.module('plumo-tasks').controller('TasksController', Controller);
+    angular.module('plumo-tasks').controller('PlumoTasksController', Controller);
 
-    Controller.$inject = [];
-    function Controller() {
+    Controller.$inject = ['tasks'];
+    function Controller(tasks) {
         var $ctrl = this;
+        $ctrl.tasks = tasks;
+        $ctrl.now = moment().format();
 
-        $ctrl.house.tasks = [{}];
-        $ctrl.newTask = null;
+        $ctrl.timeTo = function (date) {
+            return moment().to(date);
+        };
 
-        $ctrl.saveTask = function (task) {
-            HousesService.saveTask(task).then(function (data) {
-                $ctrl.task = data;
-            }, function (response) {
-                console.log(response);
-            });
-        }
-        $ctrl.addTask = function (task) {
-
-        }
-        $ctrl.displayNewTask = function () {
-            $ctrl.newTask = {
-                name: '',
-                description: ''
-            };
-        }
+        $ctrl.isExpired = function (date) {
+            return moment(date).isBefore($ctrl.now);
+        };
     }
 })(angular);

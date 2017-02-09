@@ -1,19 +1,77 @@
-
 <div class="panel panel-default">
-  <div class="panel-heading">Liste des pièces</div>
-  <div class="panel-body">
-  	
+    <div class="panel-heading">
+        <h3 class="panel-title">Liste des Pièces</h3>
+        <a class="btn btn-sm btn-default" ng-click="$ctrl.displayNewRoom()">+</a>  
+    </div>
+    <div class="panel-body">
 
-<div class="">
-    <div class="hovereffect">
-        <img class="img-thumbnail" width="140" src="img/wc.jpg" alt="wc">
-            <div class="text_hover">
-            	<span>Toilettes</span>
-            </div>
+        <uib-accordion close-others="oneAtATime">
+            <div uib-accordion-group class="panel-default" heading="test" is-open="status.isCustomHeaderOpen" ng-repeat="room in $ctrl.house.rooms">
+              <uib-accordion-heading>
+                {{room.name}} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.isCustomHeaderOpen, 'glyphicon-chevron-right': !status.isCustomHeaderOpen}"></i>
+            </uib-accordion-heading>
+            <table class="table table-hover">
+                <tr ng-repeat="task in room.tasks">
+                    <td>
+                        {{ task.name }}
+                        <span ng-if="task.done"><i class="glyphicon glyphicon-ok"></i></span>
+                        <span ng-if="!task.done"><i class="glyphicon glyphicon-remove"></i></span>
+                    </td>
+                    <td class="text-right">
+                        <a class="btn btn-default btn-sm" ng-if="!task.done" ng-click="$ctrl.performTask(task)">
+                            <i class="glyphicon glyphicon-ok"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <a class="btn btn-sm btn-default" ng-click="$ctrl.displayNewTask()">Ajouter une tâche</a>
+                    </td>
+                </tr>
+            </table>
+            <div class="" ng-if="$ctrl.newTask"> 
+                <form role="form"> 
+                    <div class="form-group"> 
+                        <label for="task">Nom de la tâche</label> 
+                        <input type="text" class="form-control" id="task" placeholder="Nom de la tâche" ng-model="$ctrl.newTask.name"> 
+                    </div> 
+                    <div class="form-group"> 
+                        <label for="description">Description</label> 
+                        <input type="text" class="form-control" id="description" placeholder="Description" ng-model="$ctrl.newTask.description"> 
+                    </div> 
+                    <div class="form-group"> 
+                        <label for="Select-room">Pièce concernée</label> 
+                        <select name="Select-room" id="Select-room" ng-model="$ctrl.newTask.room_id"> 
+                            <option ng-repeat="room in $ctrl.house.rooms" value="{{room.id}}">{{room.name}}</option> 
+                        </select> 
+                    </div> 
+                    <div class="form-group"> 
+                        <label for="user">Utilisateur</label> 
+                        <select name="Select-user" id="Select-user" ng-model="$ctrl.newTask.user_id"> 
+                            <option ng-repeat="user in $ctrl.house.users" value="{{user.id}}">{{user.name}}</option> 
+                        </select> 
+                    </div> 
+                    <div class="form-group"> 
+                        <label for="date">Date</label> 
+                        <input type="datetime" ng-model="$ctrl.newTask.date"> 
+                    </div> 
+                    <button type="button" class="btn btn-default" ng-click="$ctrl.saveTask($ctrl.newTask,room)">Submit</button> 
+                </form> 
+            </div> 
         </div>
+    </uib-accordion>
 </div>
-
-
-  </div>
+<div class="panel-footer" ng-if="$ctrl.newRoom">
+    <form role="form">
+        <div class="form-group"> 
+            <label for="room">Nom de la Pièce</label> 
+            <input type="text" class="form-control" id="room" placeholder="Nom de la tâche" ng-model="$ctrl.newRoom.name"> 
+        </div> 
+        <div class="form-group"> 
+            <label for="description-room">Description</label>
+            <input type="text" class="form-control" id="description-room" placeholder="Description" ng-model="$ctrl.newRoom.description"> 
+        </div> 
+        <button type="button" class="btn btn-default" ng-click="$ctrl.saveRoom($ctrl.newRoom)">Submit</button> 
+    </form>
 </div>
-
+</div>

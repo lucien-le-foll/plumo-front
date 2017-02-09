@@ -1,6 +1,7 @@
 <div class="panel panel-default">
     <div class="panel-heading">
         <h3 class="panel-title">Liste des tâches</h3>
+        <a class="btn btn-sm btn-default" ng-click="$ctrl.displayNewTask()">+</a>  
     </div>
     <div class="panel-body">
         <ul class="list-group">
@@ -23,7 +24,34 @@
             </li>
         </ul>
     </div>
-    <div class="panel-footer" ng-if="$ctrl.newTask">
+    <div class="panel-footer" ng-if="$ctrl.newTask"> 
+        <form role="form"> 
+            <div class="form-group"> 
+                <label for="task">Nom de la tâche</label> 
+                <input type="text" class="form-control" id="task" placeholder="Nom de la tâche" ng-model="$ctrl.newTask.name"> 
+            </div> 
+            <div class="form-group"> 
+                <label for="description">Description</label> 
+                <input type="text" class="form-control" id="description" placeholder="Description" ng-model="$ctrl.newTask.description"> 
+            </div> 
+            <div class="form-group"> 
 
-    </div>
+                <label for="Select-room">Pièce concernée</label> 
+                <select name="Select-room" id="Select-room" ng-model="$ctrl.newTask.room_id"> 
+                    <option ng-repeat="room in $ctrl.house.rooms" value="{{room.id}}">{{room.name}}</option> 
+                </select> 
+            </div> 
+            <div class="form-group"> 
+                <label for="user">Utilisateur</label> 
+                <select name="Select-user" id="Select-user" ng-model="$ctrl.newTask.user_id"> 
+                    <option ng-repeat="user in $ctrl.house.users" value="{{user.id}}">{{user.name}}</option> 
+                </select> 
+            </div> 
+            <div class="form-group"> 
+                <label for="date">Date</label> 
+                <input type="date" ng-model="$ctrl.newTask.date"> 
+            </div> 
+            <button type="button" class="btn btn-default" ng-click="$ctrl.saveTask($ctrl.newTask)">Submit</button> 
+        </form> 
+    </div> 
 </div>

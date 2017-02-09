@@ -7,9 +7,16 @@
         
         $ctrl.rooms = rooms;
         
+        $ctrl.oneAtATime = false;
+        $ctrl.status = {
+            isCustomHeaderOpen: false,
+            isFirstOpen: true,
+            isFirstDisabled: false
+        };
+
+        $ctrl.house.tasks=[{}];  
+        $ctrl.newTask=null;  
+
     }
-
-
-
 
 })(angular);

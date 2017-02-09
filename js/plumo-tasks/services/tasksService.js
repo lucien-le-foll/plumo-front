@@ -5,7 +5,10 @@
         return {
             performTask : function(task) {
                 return HTTPClient.get('/task/perform/'+task.id);
-            }
+            },
+            saveTask : function(task){ 
+                return HTTPClient.post('/task',task); 
+            } 
         };
     }
 })(angular);

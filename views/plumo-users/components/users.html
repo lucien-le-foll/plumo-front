@@ -1,29 +1,45 @@
-<ul>
-    <li>Liste des utilisateurs</li>
-    <li ng-repeat="user in $ctrl.house.users">
-        {{ user.name }}
+<div class="panel panel-default">
+    <div class="panel-heading">Liste des utilisateurs  
         <a ng-click="$ctrl.addUser = !$ctrl.addUser" class="btn btn-default">
-            <i class="fa fa-plus"></i>
-        </a>
-    </li>
-</ul>
-<div ng-if="$ctrl.addUser">
-    <ui-select ng-model="ctrl.newUser" title="Recherchez un utilisateur">
-        <ui-select-match placeholder="Recherchez par adresse mail ...">
-            {{$select.selected.email}}
-        </ui-select-match>
-        <ui-select-choices repeat="user in ctrl.researchedUsers"
-                           minimum-input-length="2"
-                           refresh="$ctrl.searchUser($select.search)">
+         <i class="glyphicon glyphicon-plus"></i></i>
+     </a>
+ </div>
+ <div class="panel-body">
+    <ul class="list-unstyled">
+        <li ng-repeat="user in $ctrl.house.users">
+            {{ user.name }}
+
+        </li>
+    </ul>
+    
+    <div ng-if="$ctrl.addUser">
+        <ui-select ng-model="ctrl.newUser" title="Recherchez un utilisateur">
+            <ui-select-match placeholder="Recherchez par adresse mail ...">
+                {{$select.selected.email}}
+            </ui-select-match>
+            <ui-select-choices repeat="user in ctrl.researchedUsers"
+            minimum-input-length="2"
+            refresh="$ctrl.searchUser($select.search)">
             {{ user.email }}
         </ui-select-choices>
     </ui-select>
 </div>
-<ul>
+
+<ul class="list-unstyled">
     <li ng-repeat="user in $ctrl.researchedUsers">
         {{ user.email }}
         <a class="btn btn-default" ng-click="$ctrl.addUserToHouse(user)">
-            <i class="fa fa-plus"></i>
+            <i class="glyphicon glyphicon-plus"></i>
         </a>
     </li>
 </ul>
+
+
+</div>
+</div>
+
+
+
+
+
+

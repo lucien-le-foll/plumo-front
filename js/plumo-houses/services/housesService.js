@@ -16,6 +16,9 @@
                 } else {
                     return HTTPClient.post('/house', httpObject);
                 }
+            },
+            leaveHouse: function(){
+                return HTTPClient.get('/house/leave');
             }
         };
     }

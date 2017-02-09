@@ -15,7 +15,6 @@
                     return HousesService.getHouse().then(function (response) {
                         return response.data;
                     }, function(error){
-                        console.log(error);
                         if(error.code == 404){
                             return undefined;
                         } else {
@@ -24,13 +23,6 @@
                     });
                 }]
             }
-        });
-
-        $stateProvider.state('app.house.edit', {
-            url: "/edit",
-            templateUrl: "views/plumo-houses/edit.html",
-            controller: "HousesEditController",
-            controllerAs: "$ctrl",
         });
     }
 

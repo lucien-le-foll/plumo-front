@@ -1,3 +1,4 @@
+
 <div class="row">
     <div class="col-sm-12">
         <div ng-if="!$ctrl.house.id" class="row">
@@ -16,5 +17,10 @@
                 <plumo-users-component house="$ctrl.house"></plumo-users-component>
             </div>
         </div>
+    </div>
+</div>
+<div class="row" ng-if="$ctrl.house.id">
+    <div class="col-sm-12">
+        <a class="btn btn-default" ng-click="$ctrl.leaveHouse()">Quitter la maison</a>
     </div>
 </div>

@@ -7,11 +7,8 @@
             </div>
         </div>
         <div ng-if="$ctrl.house.id" class="row">
-            <div class="col-sm-4">
-                <plumo-tasks-component house="$ctrl.house"></plumo-tasks-component>
-            </div>
-            <div class="col-sm-4">
-                <plumo-rooms-component rooms="$ctrl.house.rooms"></plumo-rooms-component>
+            <div class="col-sm-8">
+                <plumo-rooms-component house="$ctrl.house"></plumo-rooms-component>
             </div>
             <div class="col-sm-4">
                 <plumo-users-component house="$ctrl.house"></plumo-users-component>

@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="jumbotron">
+        <h1>Mes tâches</h1>
+        <p>Le détail de ce que vous devez effectuer</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="list-group">
+            <div class="list-group-item" ng-repeat="task in $ctrl.tasks" ng-class="{'list-group-item-success' : task.done, 'list-group-item-warning' : $ctrl.isExpired(task.date) && !task.done }">
+                <h4 class="list-group-item-heading">{{ task.name }}</h4>
+                <p class="list-group-item-text">
+                    {{ task.description }} - {{ $ctrl.timeTo(task.date) }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

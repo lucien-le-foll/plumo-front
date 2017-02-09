@@ -2,7 +2,7 @@
 
     angular.module('plumo').config(Config);
 
-    Config.$inject = ["$stateProvider", "$urlRouterProvider"]
+    Config.$inject = ["$stateProvider", "$urlRouterProvider"];
     function Config($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise("/");
 
@@ -21,6 +21,14 @@
             abstract: true,
             url: '',
             templateUrl: "views/common/app.html"
+        });
+
+        $stateProvider.state('logout', {
+            url: '/logout',
+            controller: ['$state', 'Auth', function($state, Auth){
+                $state.go('blank.landing');
+                Auth.logout();
+            }]
         });
     }
 

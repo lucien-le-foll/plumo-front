@@ -1,11 +1,11 @@
 <div class="panel panel-default">
     <div class="panel-heading">Liste des utilisateurs  
         <a ng-click="$ctrl.addUser = !$ctrl.addUser" class="btn btn-default">
-           <i class="glyphicon glyphicon-plus"></i></i>
-       </a>
-   </div>
-   <div class="panel-body">
-    <ul>
+         <i class="glyphicon glyphicon-plus"></i></i>
+     </a>
+ </div>
+ <div class="panel-body">
+    <ul class="list-unstyled">
         <li ng-repeat="user in $ctrl.house.users">
             {{ user.name }}
 
@@ -25,7 +25,7 @@
     </ui-select>
 </div>
 
-<ul>
+<ul class="list-unstyled">
     <li ng-repeat="user in $ctrl.researchedUsers">
         {{ user.email }}
         <a class="btn btn-default" ng-click="$ctrl.addUserToHouse(user)">

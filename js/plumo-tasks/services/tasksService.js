@@ -8,6 +8,9 @@
             },
             getUserTasks: function () {
                 return HTTPClient.get('/task');
+            },
+            deleteTask: function (task) {
+                return HTTPClient.remove('/task/'+task.id);
             }
         };
     }

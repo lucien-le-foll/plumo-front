@@ -1,4 +1,3 @@
-
 <div class="row">
     <div class="col-sm-12">
         <div ng-if="!$ctrl.house.id" class="row">
@@ -7,11 +6,30 @@
             </div>
         </div>
         <div ng-if="$ctrl.house.id" class="row">
-            <div class="col-sm-8">
-                <plumo-rooms-component house="$ctrl.house"></plumo-rooms-component>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="col-sm-8" ng-if="!$ctrl.houseEdit">
+                        <h2>{{ $ctrl.house.name }}</h2>
+                        <p class="text-muted">{{ $ctrl.house.description }}</p>
+                    </div>
+                    <div class="col-sm-8" ng-if="$ctrl.houseEdit">
+                        <input type="text" class="form-control input-lg" ng-model="$ctrl.house.name">
+                        <input type="text" class="form-control" ng-model="$ctrl.house.description">
+                    </div>
+                    <div class="col-sm-4 text-right">
+                        <a class="btn btn-default" ng-click="$ctrl.editHouse()">
+                            <i class="glyphicon glyphicon-edit"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-4">
-                <plumo-users-component house="$ctrl.house"></plumo-users-component>
+            <div class="row">
+                <div class="col-sm-8">
+                    <plumo-rooms-component house="$ctrl.house"></plumo-rooms-component>
+                </div>
+                <div class="col-sm-4">
+                    <plumo-users-component house="$ctrl.house"></plumo-users-component>
+                </div>
             </div>
         </div>
     </div>

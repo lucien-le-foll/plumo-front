@@ -9,7 +9,7 @@
             get: get,
             post: post,
             put: put,
-            delete: remove
+            remove: remove
         };
 
         function get(endpoint, options) {
